@@ -1,0 +1,47 @@
+.sidebar-card-files-picker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.border-files-picker{
+    width: 13rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .2rem white dashed;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.sidebar-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.sidebar-icon-files{
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: #bbc4cb;;
+}
+
+.sidebar-btn-icon{
+    display: inline-flex;
+    border-radius: 1rem;
+}
+
+@media(max-width:575px) {
+    .border-files-picker {
+        margin-top: -70px;
+    }
+}
+@media(max-width:479px) {
+    .border-files-picker {
+        h3{
+            font-size: 14px;
+        }
+    }
+}
