@@ -6,7 +6,7 @@ export const initialState: SettingState = {
   "storeKey": "huisetting-react",
   "setting": {
     "app_name": {
-      "value": "Colab"
+      "value": "Collab"
     },
     "theme_scheme_direction": {
       "value": "ltr"
@@ -80,7 +80,7 @@ export const defaultState: SettingDefaultState = {
       target: '[data-setting="app_name"]',
       choices: [],
       type: "text",
-      value: "Colab",
+      value: "Collab",
     },
     theme_scheme_direction: {
       target: "html",

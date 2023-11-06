@@ -5,7 +5,7 @@ import Logo from '../components/partials/components/logo'
 import OtherLogo from '../components/partials/components/otherLogo'
 import { Link } from 'react-router-dom'
 import iconBlack from '../assets/images/icon_black.png'
-import iconWhite from '../assets/images/icon_withe.png'
+import iconWhite from '../assets/images/icon_white.png'
 //uiKit
 import Accordions from './uikit/accordion'
 import Alerts from './uikit/alert'

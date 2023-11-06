@@ -8,39 +8,49 @@ import facebook from '../../assets/images/brands/fb.svg'
 import google from '../../assets/images/brands/gm.svg'
 import instagram from '../../assets/images/brands/im.svg'
 import linkedin from '../../assets/images/brands/li.svg'
-import auth5 from '../../assets/images/auth/05.png'
+import auth1 from '../../assets/images/auth/01.png'
+import iconBlack from '../../assets/images/icon_black.png'
+import iconWhite from '../../assets/images/icon_white.png'
+import { useSelector } from "react-redux";
+import * as SettingSelector from "../../store/setting/selectors";
+
+import Api from "../../api/api";
 
 const SignUp = () => {
    let history = useNavigate()
+   const api = new Api();
+
+   
+   const themeScheme = useSelector(SettingSelector.theme_scheme);
    return (
       <>
          <section className="login-content">
             <Row className="m-0 align-items-center bg-white vh-100">
-               <div className="col-md-6 d-md-block d-none bg-primary p-0 mt-n1 vh-100 overflow-hidden">
-                  <Image src={auth5} className="Image-fluid gradient-main animated-scaleX" alt="images" />
-               </div>
+               <Col md="6" className="d-md-block d-none bg-primary p-0 mt-n1 vh-100 overflow-hidden">
+                  <Image src={auth1} className="Image-fluid gradient-main animated-scaleX" alt="images" />
+               </Col>
                <Col md="6">
                   <Row className="justify-content-center">
                      <Col md="10">
                         <Card className="card-transparent auth-card shadow-none d-flex justify-content-center mb-0">
                            <Card.Body>
-                              <Link to="/dashboard" className="navbar-brand d-flex align-items-center mb-3">
-                                 <svg width="30" className="text-primary" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="-0.757324" y="19.2427" width="28" height="4" rx="2" transform="rotate(-45 -0.757324 19.2427)" fill="currentColor" />
-                                    <rect x="7.72803" y="27.728" width="28" height="4" rx="2" transform="rotate(-45 7.72803 27.728)" fill="currentColor" />
-                                    <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)" fill="currentColor" />
-                                    <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)" fill="currentColor" />
-                                 </svg>
-                                 <h4 className="logo-title ms-3">Colab</h4>
-                              </Link>
+                              <Row>
+                                 <Col lg="12" className='d-flex justify-content-center animated-scaleX'>
+                                    <img
+                                       style={{width:"10rem"}}
+                                       src={themeScheme == "dark" ? iconWhite : iconBlack}
+                                       alt=""
+                                    />
+                                 </Col>
+                              </Row>
                               <h2 className="mb-2 text-center">Sign Up</h2>
-                              <p className="text-center">Create your Colab account.</p>
+                              <p className="text-center">Create your Collab account.</p>
                               <Form>
                                  <Row>
                                     <Col lg="6">
                                        <Form.Group className="form-group">
-                                          <Form.Label htmlFor="full-name" className="">Full Name</Form.Label>
-                                          <Form.Control type="text" className="" id="full-name" placeholder=" " />
+                                          <Form.Label htmlFor="first-name" className="">First Name</Form.Label>
+                                          <Form.Control type="text" className="" id="first-name" placeholder=" " />
                                        </Form.Group>
                                     </Col>
                                     <Col lg="6">
@@ -49,16 +59,10 @@ const SignUp = () => {
                                           <Form.Control type="text" className="" id="last-name" placeholder=" " />
                                        </Form.Group>
                                     </Col>
-                                    <Col lg="6">
+                                    <Col lg="12">
                                        <Form.Group className="form-group">
                                           <Form.Label htmlFor="email" className="">Email</Form.Label>
                                           <Form.Control type="email" className="" id="email" placeholder=" " />
-                                       </Form.Group>
-                                    </Col>
-                                    <Col lg="6">
-                                       <Form.Group className="form-group">
-                                          <Form.Label htmlFor="phone" className="">Phone No.</Form.Label>
-                                          <Form.Control type="text" className="" id="phone" placeholder=" " />
                                        </Form.Group>
                                     </Col>
                                     <Col lg="6">
@@ -108,16 +112,6 @@ const SignUp = () => {
                         </Card>
                      </Col>
                   </Row>
-                  <div className="sign-bg sign-bg-right">
-                     <svg width="280" height="230" viewBox="0 0 421 359" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.05">
-                           <rect x="-15.0845" y="154.773" width="543" height="77.5714" rx="38.7857" transform="rotate(-45 -15.0845 154.773)" fill="#3A57E8" />
-                           <rect x="149.47" y="319.328" width="543" height="77.5714" rx="38.7857" transform="rotate(-45 149.47 319.328)" fill="#3A57E8" />
-                           <rect x="203.936" y="99.543" width="310.286" height="77.5714" rx="38.7857" transform="rotate(45 203.936 99.543)" fill="#3A57E8" />
-                           <rect x="204.316" y="-229.172" width="543" height="77.5714" rx="38.7857" transform="rotate(45 204.316 -229.172)" fill="#3A57E8" />
-                        </g>
-                     </svg>
-                  </div>
                </Col>
             </Row>
          </section>
