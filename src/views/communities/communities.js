@@ -1,8 +1,8 @@
 import React, {Fragment, memo, useState}from 'react'
 import FsLightbox from 'fslightbox-react';
-import { Row, Col, Image, Form, Nav, Dropdown, Tab, Spinner } from 'react-bootstrap'
-import Card from '../../components/Card'
-
+import CardCommunity from '../../components/CardCommunity'
+import topHeader2 from '../../assets/images/dashboard/top-header2.png'
+import photo from '../../assets/images/avatars/avtar_2.png'
 import {Link} from 'react-router-dom'
 // img
 
@@ -35,28 +35,12 @@ import pages2 from '../../assets/images/pages/02-page.png'
 import Circularprogressbar from '../../components/circularprogressbar';
 
 import ShareOffcanvas from '../../components/partials/components/shareoffcanvas'
+import Buttons from "../uikit/button";
 
 const Communities = memo((props) => {
    const [toggler, setToggler] = useState();
   return(
-        <Fragment>
-            <Row><Col lg="12">
-                  <Card>
-                        <Card.Header>
-                            <h4>
-                                Stories
-                            </h4>
-                        </Card.Header>
-                        <Card.Body className="d-flex justify-content-center">
-                            
-                        <Form.Group className=" d-flex justify-content-center form-group m-0">
-                                                    <Form.Control type="email" className="form-control-lg p-3" id="colFormLabelLg" style={{ width:'40rem', borderRadius:"2rem"}} placeholder="Write somethings here"/>
-                                                </Form.Group>
-                        </Card.Body>
-                  </Card>
-               </Col>
-            </Row>
-        </Fragment>
+      <CardCommunity communityName="Beautiful People" numberOfPosts={7} numberOfMembers={77}></CardCommunity>
   )
 
 })
