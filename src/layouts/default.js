@@ -8,27 +8,27 @@ import {  ShepherdTourContext } from "react-shepherd";
 import { Button } from "react-bootstrap";
 
 // header
-import Header from "../../components/partials/dashboard/HeaderStyle/header";
+import Header from "../components/partials/dashboard/HeaderStyle/header";
 
 //subheader
-import SubHeader from "../../components/partials/dashboard/HeaderStyle/sub-header";
+import SubHeader from "../components/partials/dashboard/HeaderStyle/sub-header";
 
 //sidebar
-import Sidebar from "../../components/partials/dashboard/SidebarStyle/sidebar";
+import Sidebar from "../components/partials/dashboard/SidebarStyle/sidebar";
 
 //footer
-import Footer from "../../components/partials/dashboard/FooterStyle/footer";
+import Footer from "../components/partials/dashboard/FooterStyle/footer";
 
 //default
 // import {DefaultRouter} from '../../router/default-router'
 
 //seetingoffCanvas
-import SettingOffCanvas from "../../components/setting/SettingOffCanvas";
+import SettingOffCanvas from "../components/setting/SettingOffCanvas";
 
-import Loader from "../../components/Loader";
+import Loader from "../components/Loader";
 
 // Import selectors & action from setting store
-import * as SettingSelector from "../../store/setting/selectors";
+import * as SettingSelector from "../store/setting/selectors";
 
 // Redux Selector / Action
 import { useSelector } from "react-redux";

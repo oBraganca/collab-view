@@ -386,69 +386,6 @@ const ThemeScheme = memo((props) => {
           </div>
         </OverlayTrigger>
       </div>
-      <hr className="hr-horizontal" />
-
-      <h5 className="mt-4 mb-3">Scheme Direction</h5>
-      <div className="d-grid gap-3 grid-cols-2 mb-4">
-        <RadioBtn
-          btnName="theme_scheme_direction"
-          imgComponent={true}
-          label="LTR"
-          className="text-center"
-          labelclassName="p-0 mb-2"
-          id="theme-scheme-direction-ltr"
-          defaultChecked={props.themeSchemeDirection}
-          value="ltr"
-        >
-          <img
-            src={image1}
-            alt="ltr"
-            className={`mode dark-img img-fluid`}
-            data-setting="dir-mode"
-            data-name="dir"
-            data-value="ltr"
-            loading="lazy"
-          />
-          <img
-            src={image2}
-            alt="ltr"
-            className={`mode light-img img-fluid`}
-            data-setting="dir-mode"
-            data-name="dir"
-            data-value="ltr"
-            loading="lazy"
-          />
-        </RadioBtn>
-        <RadioBtn
-          btnName="theme_scheme_direction"
-          imgComponent={true}
-          label="RTL"
-          className="text-center"
-          labelclassName="p-0 mb-2"
-          id="theme-scheme-direction-rtl"
-          defaultChecked={props.themeSchemeDirection}
-          value="rtl"
-        >
-          <img
-            src={image3}
-            alt="rtl"
-            className={` mode dark-img img-fluid`}
-            data-setting="dir-mode"
-            data-name="dir"
-            data-value="rtl"
-            loading="lazy"
-          />
-          <img
-            src={image4}
-            alt="rtl"
-            className={` mode light-img img-fluid`}
-            data-setting="dir-mode"
-            data-name="dir"
-            data-value="rtl"
-            loading="lazy"
-          />
-        </RadioBtn>
-      </div>
     </Fragment>
   );
 });
